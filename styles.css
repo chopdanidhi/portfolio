@@ -1,42 +1,239 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #ebebeb;
-    color: #333;
+    font-family: 'Black Mango', serif; /* Using Black Mango font */
+    height: 100%;
+    overflow-x: hidden; /* Hide horizontal scroll */
 }
 
 .portfolio {
-    width: 100vw;
-    height: 100vh;
-    background: url('background.jpg') no-repeat center center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end; /* Align items towards the end of the main axis */
     align-items: center;
-    justify-content: center;
     text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 20%; /* Increase padding to push text up from the bottom */
+}
+
+.header h1, .header p, h2 {
+    color: white;
+    transition: all 0.3s ease; /* Smooth transition for any hover effects or resizing */
 }
 
 .header h1 {
-    font-size: 48px;
-    color: white;
+    font-size: 5vw; /* Responsive font size */
+    margin: 0;
+    padding: 0;
 }
 
 .header p {
-    font-size: 20px;
-    color: white;
-    margin-top: -10px;
+    font-size: 1.5vw; /* Responsive font size */
+    margin: 0; /* Adjusted margin for single line */
 }
 
-.content h2 {
-    margin-top: 20px;
-    color: white;
-    font-size: 24px;
+h2 {
+    font-size: 2vw; /* Responsive font size */
+    margin-top: 2%; /* Spacing after the header */
 }
 
-img {
-    max-width: 100%;
+/* Styles for About Me Section */
+.about-me {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Light background for the about section */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.model-photo {
+    width: 40%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.text-content h3 {
+    margin: 0;
+    font-size: 3vw;
+    color: black;
+}
+
+.text-content p {
+    font-size: 1.5vw;
+    color: black;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0; /* Background for clarity */
+}
+
+.about-content {
+    display: flex;
+    width: 100%; /* Takes full width of the parent */
+    height: 100%; /* Takes full height of the parent */
+}
+
+.model-photo {
+    width: 50%; /* Half of the container width */
+    height: 100%; /* Full height to cover vertically */
+    background-image: url('model-photo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-content {
+    width: 50%; /* Half of the container width */
+    padding: 2% 4%; /* Padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* This is necessary for positioning the glass image */
+    min-height: 600px; /* Ensure it has a minimum height to contain the glass image at the bottom */
+    overflow: visible; /* Allows the glass image to be placed at the very bottom outside the main content */
+}
+
+
+.text-content h3 {
+    font-size: 3vw; /* Responsive font size */
+    color: black;
+    margin-bottom: 20px; /* Spacing between title and text */
+}
+
+.text-content p {
+    font-size: 1.5vw; /* Responsive font size */
+    color: black;
+}
+
+/* Enhancements for the 'About Me' header */
+.text-content h3 {
+    text-decoration: underline; /* Adds an underline below the header */
+    font-size: 4vw; /* Slightly larger font size for better visibility */
+}
+
+/* Enhancements for paragraph text */
+.text-content p {
+    font-size: 2vw; /* Slightly larger font size for better readability */
+}
+
+.glass-image {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed to ensure it is in the correct spot */
+    right: 10px; /* Adjust as needed */
+    width: 30%; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 10; /* Ensure it is above other content */
+    padding-right: 3%;
+}
+
+.vision-section {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: black; /* Ensures text contrast */
+    padding-top: 5%;
+}
+
+.vision-text {
+    width: 50%;
+    padding: 5% 10%; /* Adjust padding for better alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Subtle background gradient for readability */
+}
+
+.vision-text h1 {
+    font-size: 6vw; /* Large font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-decoration: underline; /* Adds an underline below the header */
+}
+
+.vision-text p {
+    font-size: 2.5vw; /* Adequate font size for reading */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+.vision-image {
+    width: 50%;
+    height: 100vh;
+    background-image: url('nidhi-purple.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* If you want a vertical separator as shown in the design */
+.vision-text::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white; /* This will be the color of the line */
+}
+
+.mission-section {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: black; /* Ensures text contrast */
+    padding-top: 10%;
+}
+
+.mission-text {
+    width: 50%;
+    padding: 5% 10%; /* Adjust padding for better alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Subtle background gradient for readability */
+}
+
+.mission-text h1 {
+    font-size: 6vw; /* Large font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.mission-text p {
+    font-size: 2.5vw; /* Adequate font size for reading */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+.mission-image {
+    width: 50%;
+    height: 100vh;
+    background-image: url('nidhi-coat.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Optional: Vertical separator as seen in the design */
+.mission-text::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white; /* This will be the color of the line */
 }

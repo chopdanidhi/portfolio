@@ -237,3 +237,153 @@ h2 {
     width: 1px;
     background-color: white; /* This will be the color of the line */
 }
+
+.quote-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Adjust text color for visibility */
+}
+
+.quote-text {
+    width: 60%; /* Adjust based on your design preference */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    text-align: center;
+    border-radius: 5px; /* Optional: Adds rounded corners to the text background */
+    font-size: 1.5vw; /* Responsive font size */
+}
+
+.quote-text p {
+    font-size: 1.8vw; /* Slightly larger font size for the quote */
+    line-height: 1.6; /* Space between lines */
+    margin-bottom: 20px; /* Space below the quote before the citation */
+}
+
+.quote-text cite {
+    font-size: 1.2vw; /* Smaller font size for the citation */
+    font-style: normal; /* Optional: Overrides default italic style of cite */
+}
+
+.portfolio-section {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: black; /* Adjust if you need a different background */
+}
+
+.portfolio-text {
+    flex-basis: 25%; /* Adjust according to your design preference */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%; /* Adjust padding for alignment */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text readability */
+    z-index: 2; /* Ensures text appears above the background images */
+}
+
+.portfolio-text h1 {
+    font-size: 3vw; /* Responsive font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.portfolio-text p {
+    font-size: 2vw; /* Font size for the subtitle */
+}
+
+.portfolio-image-center {
+    flex-basis: 50%; /* Half of the viewport width */
+    height: 100vh;
+    background-image: url('stripes.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-image-right {
+    flex-basis: 25%; /* Adjust based on your design preference */
+    height: 100vh;
+    background-image: url('black.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Adjust text color for visibility */
+}
+
+.contact-content {
+    text-align: center;
+    width: 60%; /* Adjust based on your design preference */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-content h1 {
+    font-size: 4vw; /* Large font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures layout adapts to different screen sizes */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Text color */
+    font-size: 1.5vw; /* Font size for contact items */
+}
+
+.contact-item img {
+    width: 50px; /* Icon size */
+    height: 50px; /* Icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.thank-you-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: black; /* Solid black background */
+    color: white; /* White text for contrast */
+}
+
+.thank-you-content {
+    text-align: center;
+    width: 80%; /* Adjust based on your design preference */
+}
+
+.thank-you-content h1 {
+    font-size: 5vw; /* Large font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-decoration: underline; /* Underline the 'Thank You' text */
+}
+
+.thank-you-content p {
+    font-size: 2vw; /* Font size for the year */
+    margin-bottom: 10px; /* Space below the year */
+}
+
+.thank-you-content span {
+    font-size: 1.5vw; /* Smaller font size for the role */
+}
